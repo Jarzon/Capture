@@ -38,7 +38,7 @@ class Capture
     {
         $output = [];
 
-        if ($this->isWindows() && $async) {
+        if ($this::isWindows() && $async) {
             pclose(popen("start /B ". $cmd, "r"));
         } else {
             if($async) {
@@ -51,7 +51,7 @@ class Capture
         return $output;
     }
 
-    public function isWindows() : bool
+    public static function isWindows() : bool
     {
         return substr(php_uname(), 0, 7) === "Windows";
     }

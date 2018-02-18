@@ -13,6 +13,6 @@ Take a screenshot/pdf/html, of a page using Chrome.
 Configure Chrome location
 ```php
     $capture = new Capture([
-        'chrome_path' => ($capture->isWindows())? '"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"': '/usr/bin/google-chrome'
+        'chrome_path' => (Capture::isWindows())? '"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"': '/usr/bin/google-chrome'
     ]);
 ```

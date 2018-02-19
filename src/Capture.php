@@ -34,7 +34,7 @@ class Capture
         return $this->exec("{$this->options['chrome_path']} --headless --disable-gpu $flags $url", $async);
     }
 
-    private function exec(string $cmd, bool $async = true) : array
+    public function exec(string $cmd, bool $async = true) : array
     {
         $output = [];
 

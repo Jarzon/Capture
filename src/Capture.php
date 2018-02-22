@@ -39,7 +39,7 @@ class Capture
         $output = [];
 
         if ($this::isWindows() && $async) {
-            pclose(popen("start /B ". $cmd, "r"));
+            pclose(popen("start /B \"cmd title\" $cmd", "r"));
         } else {
             if($async) {
                 $cmd .= " > /dev/null &";

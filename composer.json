@@ -7,6 +7,9 @@
   "autoload-dev": {
     "psr-4": {"Tests\\": "tests/"}
   },
+  "config": {
+    "bin-dir": "bin"
+  },
   "require": {
     "php": ">=7.0.0"
   },
